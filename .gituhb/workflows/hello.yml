@@ -1,0 +1,16 @@
+name: Say hello
+# un worflow es una series de procesos
+
+# importante ,las cosas que deben tener los worflows de github actions son eventos, cuando se debe activar un worflow
+# hay que indicar cuando se debe activar este archivo
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo the message
+      - run: echo "Hello, world!"
